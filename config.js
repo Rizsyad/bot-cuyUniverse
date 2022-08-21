@@ -4,6 +4,7 @@ const { TOKEN } = process.env;
 
 module.exports = {
   TOKEN,
+  COLORS_EMBEED: "RANDOM",
   MAIN_COLOR: "",
   ERROR_COLOR: "",
   DEFAULT_PREFIX: "?",
