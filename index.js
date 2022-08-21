@@ -3,7 +3,13 @@ require("./webserver");
 
 const { Client, Intents, Collection } = require("discord.js");
 const client = new Client({
-  intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MESSAGES],
+  intents: [
+    Intents.FLAGS.GUILDS,
+    Intents.FLAGS.GUILD_MESSAGES,
+    Intents.FLAGS.GUILD_MEMBERS,
+    Intents.FLAGS.GUILD_PRESENCES
+],
+  
 });
 const fs = require("fs");
 
@@ -16,4 +22,4 @@ module.exports = client;
   require(`./handlers/${handler}`)(client);
 });
 
-client.login(TOKEN);
+client.login("ODk2MDMxNTU0NTc5NjExNjg5.Gqcs8e.A0dcx0hf0XqHsLfYd9maJYTHehU3uGU8PEorSo");
