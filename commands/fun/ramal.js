@@ -8,7 +8,13 @@ module.exports = {
     description: "Meramalkan sesuatu",
     run: async (client, message, args) => {
         if(!args[0]){
-            await message.channel.send("Harap Masukkan Ramalan")
+            const ErrorEmbed = new MessageEmbed()
+                .setTitle("Error")
+                .setDescription("Harap Masukkan Ramalan")
+                .setColor(COLORS_EMBEED)
+                .setFooter(client.user.username, client.user.displayAvatarURL())
+                .setTimestamp();
+            await message.reply({ embeds: [ErrorEmbed] })
         }else{
             const ListResponse = ['Hooh Tenan','Yo Ndak Tau Kok Tanya Saya','Ente Kadang-Kadang','Bisa Jadi','Menurut WikiPedia Mustahil','Gabisa','Tanya Sama Diri Sendiri'];
             const RamalEmbed = new MessageEmbed()
@@ -21,7 +27,7 @@ module.exports = {
                 .setFooter(client.user.username, client.user.displayAvatarURL())
                 .setTimestamp();
 
-                await message.channel.send({ embeds: [RamalEmbed] });
+                await message.reply({ embeds: [RamalEmbed] });
         }
     }
 }
