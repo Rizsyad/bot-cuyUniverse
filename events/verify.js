@@ -17,6 +17,7 @@ client.on("messageCreate", async (msg) => {
     );
 
     msg.react(EMOJI.SUCCESS);
+    return;
   }
 
   msg.channel
