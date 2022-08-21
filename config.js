@@ -6,8 +6,8 @@ module.exports = {
   TOKEN,
   MAIN_COLOR: "",
   ERROR_COLOR: "",
-  DEFAULT_PREFIX: "",
-  PREFIX: "cuy/",
+  DEFAULT_PREFIX: "?",
+  PREFIX: "c/",
   USER: {
     AVATAR:
       "https://cdn.discordapp.com/attachments/1010262515340550204/1010524034364088360/dea.jpg",

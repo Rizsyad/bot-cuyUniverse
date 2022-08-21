@@ -2,7 +2,7 @@ const { PREFIX, DEFAULT_PREFIX, CHANNEL, ROLE } = require("../config");
 const client = require("../index");
 const prefix = PREFIX || DEFAULT_PREFIX;
 
-client.on("message", async (msg) => {
+client.on("messageCreate", async (msg) => {
   if (msg.author.bot || !msg.guild) return;
 
   if (msg.channelId == CHANNEL.VERIFIED && !msg.content.startsWith(prefix)) {

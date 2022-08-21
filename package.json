@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "Cuy Universe Bot",
   "main": "index.js",
-  "engines": {
-    "node": "16.x"
-  },
   "scripts": {
     "dev": "nodemon .",
     "start": "node index.js"
