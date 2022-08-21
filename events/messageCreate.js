@@ -3,22 +3,7 @@ const client = require("../index");
 const prefix = PREFIX || DEFAULT_PREFIX;
 
 client.on("messageCreate", async (msg) => {
-  if (msg.author.bot || !msg.guild) return;
-
-  if (msg.channelId == CHANNEL.VERIFIED && !msg.content.startsWith(prefix)) {
-    const roleToGive = msg.guild.roles.cache.find(
-      (role) => role.name === ROLE.verify
-    );
-    msg.member.roles.add(roleToGive);
-
-    msg.channel.send(
-      `Terimakasih <@${msg.author.id}>, sudah perkenalan sesuai format. Salam kenal`
-    );
-
-    msg.react("✅");
-  }
-
-  if (!msg.content.startsWith(prefix)) return;
+  if (msg.author.bot || !msg.content.startsWith(prefix) || !msg.guild) return;
 
   const args = msg.content.slice(prefix.length).trim().split(" ");
   const cmd = args.shift().toLowerCase();
