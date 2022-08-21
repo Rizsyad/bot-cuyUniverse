@@ -22,4 +22,4 @@ module.exports = client;
   require(`./handlers/${handler}`)(client);
 });
 
-client.login("ODk2MDMxNTU0NTc5NjExNjg5.Gqcs8e.A0dcx0hf0XqHsLfYd9maJYTHehU3uGU8PEorSo");
+client.login(TOKEN);
