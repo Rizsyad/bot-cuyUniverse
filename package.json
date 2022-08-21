@@ -1,0 +1,22 @@
+{
+  "name": "bot-cuyuniverse",
+  "version": "1.0.0",
+  "description": "Cuy Universe Bot",
+  "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "dev": "nodemon .",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-table": "^0.0.9",
+    "discord.js": "^13.6.0",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "ms": "^2.1.3"
+  }
+}
