@@ -9,6 +9,8 @@ const fs = require("fs");
 
 client.commands = new Collection();
 client.aliases = new Collection();
+client.snipes = new Collection();
+
 client.categories = fs.readdirSync("./commands/");
 module.exports = client;
 
