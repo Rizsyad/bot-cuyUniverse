@@ -8,7 +8,7 @@ table.setHeading("Slash Command / Commands", "Status Command ");
 
 module.exports = async (client) => {
   // command handle start
-  const Commands = fg.sync(`${process.cwd()}/commands/*/*.js`, { dot: true });
+  const Commands = fg.sync(`${process.cwd()}/commands/*/*.js`, { dot: false });
   Commands.map((value) => {
     const get = require(value);
     const filename = path.parse(value).base;
@@ -30,7 +30,7 @@ module.exports = async (client) => {
   // command handle end
 
   // Events
-  const eventFiles = fg.sync(`${process.cwd()}/events/*.js`, { dot: true });
+  const eventFiles = fg.sync(`${process.cwd()}/events/*.js`, { dot: false });
   eventFiles.map((value) => require(value));
 
   // Slash Commands
