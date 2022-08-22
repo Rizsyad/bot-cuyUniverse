@@ -1,4 +1,3 @@
-const { TOKEN } = require("./config");
 require("./webserver");
 
 const { Client, Intents, Collection } = require("discord.js");
@@ -7,21 +6,18 @@ const client = new Client({
     Intents.FLAGS.GUILDS,
     Intents.FLAGS.GUILD_MESSAGES,
     Intents.FLAGS.GUILD_MEMBERS,
-    Intents.FLAGS.GUILD_PRESENCES
-],
-  
+    Intents.FLAGS.GUILD_PRESENCES,
+  ],
 });
-const fs = require("fs");
 
 client.commands = new Collection();
 client.aliases = new Collection();
 client.snipes = new Collection();
+client.slashCommand = new Collection();
+client.config = require("./config");
 
-client.categories = fs.readdirSync("./commands/");
 module.exports = client;
 
-["handler"].forEach((handler) => {
-  require(`./handlers/${handler}`)(client);
-});
+require(`./handlers`)(client);
 
-client.login(TOKEN);
+client.login(client.config.TOKEN);
