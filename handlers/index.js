@@ -35,7 +35,7 @@ module.exports = async (client) => {
 
   // Slash Commands
   const slashCommands = fg.sync(`${process.cwd()}/slashCommands/*/*.js`, {
-    dot: true,
+    dot: false,
   });
 
   const arrayOfSlashCommands = [];
