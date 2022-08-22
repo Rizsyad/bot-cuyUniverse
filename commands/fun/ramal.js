@@ -27,7 +27,7 @@ module.exports = {
                 .setFooter(client.user.username, client.user.displayAvatarURL())
                 .setTimestamp();
 
-                await message.reply({ embeds: [RamalEmbed] });
+            await message.reply({ embeds: [RamalEmbed] });
         }
     }
 }
