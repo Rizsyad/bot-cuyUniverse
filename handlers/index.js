@@ -1,17 +1,14 @@
 const ascii = require("ascii-table");
 const { EMOJI } = require("../config");
 const path = require("path");
-
-const { glob } = require("glob");
-const { promisify } = require("util");
-const globPromise = promisify(glob);
+const fg = require("fast-glob");
 
 let table = new ascii("Commands List");
 table.setHeading("Slash Command / Commands", "Status Command ");
 
 module.exports = async (client) => {
   // command handle start
-  const Commands = await globPromise(`${process.cwd()}/commands/*/*.js`);
+  const Commands = fg.sync(`${process.cwd()}/commands/*/*.js`, { dot: false });
   Commands.map((value) => {
     const get = require(value);
     const filename = path.parse(value).base;
@@ -33,13 +30,13 @@ module.exports = async (client) => {
   // command handle end
 
   // Events
-  const eventFiles = await globPromise(`${process.cwd()}/events/*.js`);
+  const eventFiles = fg.sync(`${process.cwd()}/events/*.js`, { dot: false });
   eventFiles.map((value) => require(value));
 
   // Slash Commands
-  const slashCommands = await globPromise(
-    `${process.cwd()}/slashCommands/*/*.js`
-  );
+  const slashCommands = fg.sync(`${process.cwd()}/slashCommands/*/*.js`, {
+    dot: false,
+  });
 
   const arrayOfSlashCommands = [];
   slashCommands.map((value) => {
