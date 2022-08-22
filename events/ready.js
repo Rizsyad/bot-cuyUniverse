@@ -19,7 +19,4 @@ client.on("ready", () => {
   setInterval(pickStatus, 3000);
 
   console.log(`bot is on!`);
-
-  // if (USER.AVATAR) client.user.setAvatar(USER.AVATAR);
-  // if (USER.BANNER) client.user.bannerURL(USER.BANNER);
 });
