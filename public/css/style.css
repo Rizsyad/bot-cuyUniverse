@@ -1,0 +1,180 @@
+/* =============================================================================
+   My CSS
+   ========================================================================== */
+
+/* ---- base ---- */
+
+:root {
+  --primary-color: #edf2fc;
+  --rgb-primary: 255,255,255;
+  --rgb-secondary: 0,0,0;
+  --secondary-color: #212121;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: #121212;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 20px;
+  background: white;
+  box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 0.25), inset -2px -2px -2px rgba(0,0,0,0.25);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #121212 no-repeat center;
+  background-size: cover;
+}
+
+canvas{
+  display:block;
+  vertical-align:bottom;
+}
+
+.logo {
+  display: flex;
+  position: relative;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+  font-family: 'Poppins', sans-serif;
+  color: var(--primary-color);
+  font-style: bold;
+  transition: .5s;
+}
+
+.logo:hover {
+  color: #DC143C;
+}
+
+li, a, button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  color: var(--primary-color);
+  text-decoration: none;
+  margin-right: 20px;
+  text-transform: uppercase;
+  letter-spacing: .15em;
+}
+
+header {
+  top: 0;
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 10%;
+  background-color: rgba(var(--primary-color) 0.6);
+  z-index: 2;
+  width: 100%;
+  transition: all .3s ease;
+}
+
+.navbar {
+  list-style: none;
+}
+
+header.sticky {
+  padding: 10px 10%;
+  background: var(--secondary-color);
+  box-shadow: 0 0 25px;
+}
+
+.navbar li {
+  display: inline-block;
+  position: relative;
+  left: -300px;
+  padding: 0 20px;
+}
+
+.navbar li a {
+  transition: all .5s ease 0s;
+}
+
+.navbar li a:hover {
+  text-shadow: 0 0 5px var(--primary-color);;
+}
+
+.home {
+  display: flex;
+  align-items: center;
+  background: #121212 no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  font-family: 'Ubuntu', sans-serif;
+  margin-left: 15rem;
+}
+
+.home-content {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+.home-content h1 {
+  font-size: 80px;
+}
+
+.home-content .p1 {
+  font-size: 26px;
+}
+
+.home-content .p2 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #DC143C;
+}
+
+.home-content a {
+  z-index: 1;
+}
+
+.home-content button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 20px;
+  width: 30%;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 15px var(--secondary-color);
+  cursor: pointer;
+  z-index: 1;
+  transition: .5s;
+}
+
+.home-content button:hover {
+  position: relative;
+  padding: 23px;
+  width: 32%;
+  left: -1px;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  letter-spacing: .20em;
+}
+
+.test {
+  height: 5vh;
+}
+
+/* ---- particles.js container ---- */
+
+#particles-js {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+}
