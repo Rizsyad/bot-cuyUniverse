@@ -2,13 +2,14 @@ const ascii = require("ascii-table");
 const { EMOJI } = require("../config");
 const path = require("path");
 const fg = require("fast-glob");
+const paths = path.join(process.cwd()).replace(/\\/g, "/");
 
 let table = new ascii("Commands List");
 table.setHeading("Slash Command / Commands", "Status Command ");
 
 module.exports = async (client) => {
   // command handle start
-  const Commands = fg.sync(`${process.cwd()}/commands/*/*.js`, { dot: false });
+  const Commands = fg.sync(`${paths}/commands/*/*.js`, { dot: false });
   Commands.map((value) => {
     const get = require(value);
     const filename = path.parse(value).base;
@@ -30,11 +31,11 @@ module.exports = async (client) => {
   // command handle end
 
   // Events
-  const eventFiles = fg.sync(`${process.cwd()}/events/*.js`, { dot: false });
+  const eventFiles = fg.sync(`${paths}/events/*.js`, { dot: false });
   eventFiles.map((value) => require(value));
 
   // Slash Commands
-  const slashCommands = fg.sync(`${process.cwd()}/slashCommands/*/*.js`, {
+  const slashCommands = fg.sync(`${paths}/slashCommands/*/*.js`, {
     dot: false,
   });
 
