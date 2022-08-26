@@ -1,8 +1,9 @@
-const { MessageEmbed } = require("discord.js");
+const { embeed } = require("../../helpers/utility");
 
 module.exports = {
   name: "ramal",
   description: "Meramalkan sesuatu",
+  category: "fun",
   options: [
     {
       name: "ramalan",
@@ -13,8 +14,6 @@ module.exports = {
   ],
   run: async (client, interaction, args) => {
     const [ramalan] = args;
-    const { COLORS_EMBEED } = client.config;
-
     const ListResponse = [
       "Hooh Tenan",
       "Yo Ndak Tau Kok Tanya Saya",
@@ -24,20 +23,20 @@ module.exports = {
       "Gabisa",
       "Tanya Sama Diri Sendiri",
     ];
-    const RamalEmbed = new MessageEmbed()
-      .setTitle("Ramal")
-      .setColor(COLORS_EMBEED)
-      .addFields(
+
+    const embeedJson = {
+      title: "Ramal",
+      fields: [
         { name: "Pertanyaan", value: `${ramalan}` },
         {
           name: "Hasil Ramalan",
           value: `${ListResponse[Math.floor(Math.random() * 6)]}`,
           inline: true,
-        }
-      )
-      .setFooter(client.user.username, client.user.displayAvatarURL())
-      .setTimestamp();
+        },
+      ],
+    };
 
+    const RamalEmbed = embeed(embeedJson);
     return interaction.followUp({ embeds: [RamalEmbed] });
   },
 };

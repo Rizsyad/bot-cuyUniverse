@@ -3,6 +3,7 @@ const ms = require("ms");
 module.exports = {
   name: "slowmode",
   description: "slowmode channel",
+  category: "moderation",
   options: [
     {
       name: "time",

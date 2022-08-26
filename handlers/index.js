@@ -5,31 +5,9 @@ const fg = require("fast-glob");
 const paths = path.join(process.cwd()).replace(/\\/g, "/");
 
 let table = new ascii("Commands List");
-table.setHeading("Slash Command / Commands", "Status Command ");
+table.setHeading("Slash Command", "Status Command ");
 
 module.exports = async (client) => {
-  // command handle start
-  const Commands = fg.sync(`${paths}/commands/*/*.js`, { dot: false });
-  Commands.map((value) => {
-    const get = require(value);
-    const filename = path.parse(value).base;
-
-    if (get.name) {
-      client.commands.set(get.name, get);
-      table.addRow(filename, EMOJI.SUCCESS);
-    } else {
-      table.addRow(filename, EMOJI.ERROR);
-      return;
-    }
-
-    if (get.aliases && Array.isArray(get.aliases)) {
-      get.aliases.forEach((alias) => {
-        client.aliases.set(alias, get.name);
-      });
-    }
-  });
-  // command handle end
-
   // Events
   const eventFiles = fg.sync(`${paths}/events/*.js`, { dot: false });
   eventFiles.map((value) => require(value));

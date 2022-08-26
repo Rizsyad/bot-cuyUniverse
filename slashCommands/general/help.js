@@ -1,9 +1,10 @@
-const { MessageEmbed } = require("discord.js");
+const { embeed } = require("../../helpers/utility");
 const fs = require("fs");
 
 module.exports = {
   name: "help",
   description: "Show help menu",
+  category: "general",
   options: [
     {
       name: "cmd",
@@ -14,19 +15,18 @@ module.exports = {
   ],
   run: async (client, interaction, args) => {
     const [cmd] = args;
-    const { COLORS_EMBEED, PREFIX, DEFAULT_PREFIX } = client.config;
-    const prefix = PREFIX || DEFAULT_PREFIX;
 
     if (!cmd) {
       let categories = [];
+      fs.readdirSync("./slashCommands/").forEach((dir) => {
+        if (dir === "context") return;
 
-      fs.readdirSync("./commands/").forEach((dir) => {
         const commands = fs
-          .readdirSync(`./commands/${dir}/`)
+          .readdirSync(`./slashCommands/${dir}/`)
           .filter((file) => file.endsWith(".js"));
 
         const cmds = commands.map((command) => {
-          let file = require(`../../commands/${dir}/${command}`);
+          let file = require(`../../slashCommands/${dir}/${command}`);
           if (!file.name) return;
 
           let name = file.name.replace(".js", "");
@@ -41,65 +41,46 @@ module.exports = {
 
         categories.push(data);
       });
-
-      const HelpEmbeed = new MessageEmbed()
-        .setTitle("Help Menu")
-        .setDescription(
-          `Use \`${prefix}help\` with command name to get command information.`
-        )
-        .addFields(categories)
-        .setColor("GREEN")
-        .setThumbnail(client.user.displayAvatarURL())
-        .setFooter(client.user.username, client.user.displayAvatarURL())
-        .setTimestamp();
+      const embeedJson = {
+        title: "Help Menu",
+        description: `Use \`/help\` with command name to get command information.`,
+        fields: categories,
+        color: "GREEN",
+        thumbnail: client.user.displayAvatarURL(),
+      };
+      const HelpEmbeed = embeed(embeedJson);
 
       return interaction.followUp({ embeds: [HelpEmbeed] });
     } else {
       const cmdss = cmd.toLowerCase();
-
-      const command =
-        client.commands.get(cmdss) ||
-        client.commands.find((c) => c.aliases && c.aliases.includes(cmdss));
+      const command = client.slashCommand.get(cmdss);
 
       if (!command) {
-        const noCommandEmbeed = new MessageEmbed()
-          .setTitle("Command not found")
-          .setDescription(`Use \`${prefix}help\` to list all commands.`)
-          .setColor("RED")
-          .setThumbnail(client.user.displayAvatarURL())
-          .setFooter(client.user.username, client.user.displayAvatarURL())
-          .setTimestamp();
-
+        const noCommandEmbeed = embeed({
+          title: "Command not found",
+          description: `Use \`/help\` to list all commands.`,
+          color: "RED",
+          thumbnail: client.user.displayAvatarURL(),
+        });
         return interaction.followUp({ embeds: [noCommandEmbeed] });
       }
 
-      const helpMenuEmbeed = new MessageEmbed()
-        .setTitle("Command information")
-        .addField("Prefix", `\`${prefix}\``)
-        .addField(
-          "Command",
-          command.name ? `\`${command.name}\`` : "No command name."
-        )
-        .addField(
-          "Aliases",
-          command.aliases
-            ? `\`${command.aliases.join("` `")}\``
-            : "No aliases name."
-        )
-        .addField(
-          "Usage",
-          command.usage
-            ? `\`${prefix}${command.name} ${command.usage}\``
-            : `\`${prefix}${command.name}\``
-        )
-        .addField(
-          "Description",
-          command.description ? `\`${command.description}\`` : "No description."
-        )
-        .setColor(COLORS_EMBEED)
-        .setThumbnail(client.user.displayAvatarURL())
-        .setFooter(client.user.username, client.user.displayAvatarURL())
-        .setTimestamp();
+      const helpMenuEmbeed = embeed({
+        title: "Command information",
+        fields: [
+          {
+            name: "Command",
+            value: command.name ? `\`${command.name}\`` : "No command name.",
+          },
+          {
+            name: "Description",
+            value: command.description
+              ? `\`${command.description}\``
+              : "No description.",
+          },
+        ],
+        thumbnail: client.user.displayAvatarURL(),
+      });
 
       return interaction.followUp({ embeds: [helpMenuEmbeed] });
     }

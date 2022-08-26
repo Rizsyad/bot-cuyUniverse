@@ -1,9 +1,10 @@
 const translate = require("@iamtraction/google-translate");
-const { MessageEmbed } = require("discord.js");
+const { embeed } = require("../../helpers/utility");
 
 module.exports = {
   name: "translate",
   description: "Translate a text to another language",
+  category: "general",
   options: [
     { name: "text", description: "Your Text", type: "STRING", required: true },
     {
@@ -150,15 +151,14 @@ module.exports = {
   run: async (client, interaction, args) => {
     const [text, ...languages] = args;
     const language = languages[0];
-    const { COLORS_EMBEED } = client.config;
+    let embeedJson = {};
 
     if (!language) {
-      const ErrorEmbed = new MessageEmbed()
-        .setTitle("Error")
-        .setDescription("Harap masukkan bahasa")
-        .setColor(COLORS_EMBEED)
-        .setFooter(client.user.username, client.user.displayAvatarURL())
-        .setTimestamp();
+      embeedJson = {
+        title: "Error",
+        description: "Harap masukkan bahasa",
+      };
+      const ErrorEmbed = embeed(embeedJson);
       return interaction.followUp({ embeds: [ErrorEmbed] });
     }
 
@@ -166,16 +166,14 @@ module.exports = {
       const TranslateResult =
         x.text.charAt(0).toUpperCase() + x.text.slice(1).toLowerCase();
 
-      const TranslateEmbed = new MessageEmbed()
-        .setTitle("Translate")
-        .setColor(COLORS_EMBEED)
-        .addFields(
+      embeedJson = {
+        title: "Translate",
+        fields: [
           { name: "Your Language", value: text },
-          { name: "Translated To", value: TranslateResult }
-        )
-        .setFooter(client.user.username, client.user.displayAvatarURL())
-        .setTimestamp();
-
+          { name: "Translated To", value: TranslateResult },
+        ],
+      };
+      const TranslateEmbed = embeed(embeedJson);
       interaction.followUp({ embeds: [TranslateEmbed] });
     });
   },

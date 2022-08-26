@@ -21,7 +21,7 @@ client.on("messageCreate", async (msg) => {
   }
 
   msg.channel
-    .send(`Sorry format yang anda masukan tidak sesuai dengan kriteria validasi silahkan copy lalu isi ya cuy
+    .send(`Sorry format yang <@${msg.author.id}>, masukan tidak sesuai dengan kriteria validasi silahkan copy lalu isi ya cuy
 `);
   msg.react(EMOJI.ERROR);
 });
