@@ -1,9 +1,11 @@
-const { MessageEmbed } = require("discord.js");
+const { embeed } = require("../../helpers/utility");
+
 const moment = require("moment-mini");
 
 module.exports = {
   name: "snipe",
   description: "Show deleted chat",
+  category: "moderation",
   options: [
     {
       name: "page",
@@ -36,14 +38,19 @@ module.exports = {
       });
 
     const { msg, time, image } = target;
-    const snipeEmbeed = new MessageEmbed()
-      .setAuthor(msg.author.tag, msg.author.displayAvatarURL())
-      .setImage(image)
-      .setDescription(msg.content)
-      .setFooter(
-        `${moment(time).fromNow()} | Snipe ${snipe + 1} / ${snipes.length}`
-      )
-      .setColor("RANDOM");
+    const snipeEmbeed = embeed({
+      author: {
+        name: msg.author.tag,
+        image: msg.author.displayAvatarURL(),
+      },
+      image,
+      description: msg.content,
+      footer: {
+        name: `${moment(time).fromNow()} | Snipe ${snipe + 1} / ${
+          snipes.length
+        }`,
+      },
+    });
 
     await interaction.followUp({ embeds: [snipeEmbeed] });
   },

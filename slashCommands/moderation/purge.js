@@ -1,6 +1,7 @@
 module.exports = {
   name: "purge",
   description: "purge message",
+  category: "moderation",
   options: [
     {
       name: "count",
@@ -29,12 +30,12 @@ module.exports = {
       limit: count,
     });
 
-    interaction.channel
-      .bulkDelete(fetchMessage, true)
-      .catch((err) => console.error(`Cannot delete message ${err}`));
-
-    interaction.followUp({
+    await interaction.followUp({
       content: `Purged ${count} messages`,
     });
+
+    await interaction.channel
+      .bulkDelete(fetchMessage, true)
+      .catch((err) => console.error(`Cannot delete message ${err}`));
   },
 };
