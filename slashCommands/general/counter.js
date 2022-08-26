@@ -1,20 +1,24 @@
-const { MessageEmbed } = require("discord.js");
+const { embeed } = require("../../helpers/utility");
 
 module.exports = {
   name: "counter",
   description: "Show server members",
+  category: "general",
   run: async (client, interaction, args) => {
     const TotalMembers = interaction.guild.memberCount;
     const Bot = interaction.guild.members.cache.filter((m) => m.user.bot).size;
     const Human = TotalMembers - Bot;
-    const CountEmbed = new MessageEmbed()
-      .setTitle("Counter")
-      .addFields({ name: "👥 Total Members", value: `${TotalMembers}` })
-      .addFields({ name: "🤖 Bot", value: `${Bot}`, inline: true })
-      .addFields({ name: "👤 Human", value: `${Human}`, inline: true })
-      .setColor(client.config.COLORS_EMBEED)
-      .setFooter(client.user.username, client.user.displayAvatarURL())
-      .setTimestamp();
+
+    const embeedJson = {
+      title: "Counter",
+      fields: [
+        { name: "👥 Total Members", value: `${TotalMembers}` },
+        { name: "🤖 Bot", value: `${Bot}`, inline: true },
+        { name: "👤 Human", value: `${Human}`, inline: true },
+      ],
+    };
+
+    const CountEmbed = embeed(embeedJson);
 
     await interaction.followUp({ embeds: [CountEmbed] });
   },
