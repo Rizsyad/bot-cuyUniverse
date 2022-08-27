@@ -153,10 +153,10 @@ module.exports = {
     const language = languages[0];
     let embeedJson = {};
 
-    if (!language) {
-
-      return interaction.followUp({ embeds: [errorEmbed("Harap masukkan bahasa")] });
-    }
+    if (!language)
+      return interaction.followUp({
+        embeds: [errorEmbed("Harap masukkan bahasa")],
+      });
 
     translate(text, { to: language }).then((x) => {
       const TranslateResult =

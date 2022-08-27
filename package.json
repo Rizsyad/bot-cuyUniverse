@@ -13,6 +13,7 @@
     "@iamtraction/google-translate": "github:iamtraction/google-translate",
     "ascii-table": "^0.0.9",
     "axios": "^0.27.2",
+    "discord-together": "^1.3.31",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
