@@ -1,6 +1,8 @@
 require("./webserver");
 
 const { Client, Intents, Collection } = require("discord.js");
+const { DiscordTogether } = require("discord-together");
+
 const client = new Client({
   intents: [
     Intents.FLAGS.GUILDS,
@@ -13,6 +15,7 @@ const client = new Client({
 
 client.snipes = new Collection();
 client.slashCommand = new Collection();
+client.discordTogether = new DiscordTogether(client);
 client.config = require("./config");
 
 module.exports = client;

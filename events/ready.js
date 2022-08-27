@@ -4,7 +4,7 @@ const prefix = PREFIX || DEFAULT_PREFIX;
 
 client.on("ready", () => {
   const pickStatus = () => {
-    const status = [`for ${prefix}help`, `for fun`];
+    const status = [`for /help`, `for fun`, `for moderation`];
 
     let randomStatus = Math.floor(Math.random() * status.length);
 
