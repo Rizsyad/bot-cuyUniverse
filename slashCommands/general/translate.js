@@ -1,5 +1,5 @@
 const translate = require("@iamtraction/google-translate");
-const { embeed } = require("../../helpers/utility");
+const { embeed, errorEmbed } = require("../../helpers/utility");
 
 module.exports = {
   name: "translate",
@@ -154,12 +154,8 @@ module.exports = {
     let embeedJson = {};
 
     if (!language) {
-      embeedJson = {
-        title: "Error",
-        description: "Harap masukkan bahasa",
-      };
-      const ErrorEmbed = embeed(embeedJson);
-      return interaction.followUp({ embeds: [ErrorEmbed] });
+
+      return interaction.followUp({ embeds: [errorEmbed("Harap masukkan bahasa")] });
     }
 
     translate(text, { to: language }).then((x) => {
