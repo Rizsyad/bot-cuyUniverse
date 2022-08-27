@@ -8,7 +8,7 @@ module.exports = {
     {
       name: "ramalan",
       description: "Masukan Ramalan yang anda inginkan",
-      type: "STRING",
+      type: "STRING", 
       required: true,
     },
   ],
