@@ -39,6 +39,17 @@ const embeed = (embeedJson) => {
   return makeEmbeed;
 };
 
+const errorEmbed = (text) => {
+  const makeEmbeed = new MessageEmbed()
+    .setTitle("Error")
+    .setDescription(text)
+    .setColor(COLORS_EMBEED)
+    .setFooter(client.user.username, client.user.displayAvatarURL())
+    .setTimestamp();
+  return makeEmbeed
+}
+
 module.exports = {
   embeed,
+  errorEmbed,
 };
