@@ -1,5 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const client = require("../index");
+const ms = require("ms");
+
 const { COLORS_EMBEED } = client.config;
 
 const embeed = (embeedJson) => {
@@ -48,7 +50,31 @@ const errorEmbed = (text) => {
   return makeEmbeed;
 };
 
+const modActionEmbeed = (action, usertag, userid, modid, reason, duration) => {
+  const makeEmbeed = embeed({
+    title: `[${action}] ${usertag}`,
+    fields: [
+      { name: "User", value: `<@${userid}>`, inline: true },
+      {
+        name: "Moderator",
+        value: `<@${modid}>`,
+        inline: true,
+      },
+      { name: "Reason", value: reason, inline: true },
+      {
+        name: "Duration",
+        value: `${ms(duration, { long: true })}`,
+        inline: true,
+      },
+    ],
+    color: "RED",
+  });
+
+  return makeEmbeed;
+};
+
 module.exports = {
   embeed,
   errorEmbed,
+  modActionEmbeed,
 };

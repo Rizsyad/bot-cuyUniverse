@@ -1,12 +1,23 @@
 const client = require("../index");
 
 client.on("interactionCreate", async (interaction) => {
+  if (!interaction.inGuild())
+    return interaction.reply("This command can only be used in a server");
+
   // Slash Command Handling
   if (interaction.isCommand()) {
     await interaction.deferReply({ ephemeral: false }).catch(() => {});
 
     const cmd = client.slashCommand.get(interaction.commandName);
     if (!cmd) return interaction.followUp({ content: "An error has occured " });
+
+    if (
+      cmd.userPermissions &&
+      !interaction.member.permissions.has(cmd.userPermissions)
+    )
+      return interaction.followUp({
+        content: `${client.config.EMOJI.ERROR} You don't have permission for this command`,
+      });
 
     const args = [];
 

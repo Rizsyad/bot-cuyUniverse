@@ -2,6 +2,7 @@ module.exports = {
   name: "purge",
   description: "purge message",
   category: "moderation",
+  userPermissions: ["MANAGE_CHANNELS"],
   options: [
     {
       name: "count",
@@ -13,12 +14,6 @@ module.exports = {
   run: async (client, interaction, args) => {
     const [count] = args;
     const { EMOJI } = client.config;
-
-    if (!interaction.member.permissions.has("MANAGE_CHANNELS")) {
-      return interaction.followUp({
-        content: `${EMOJI.ERROR} You don't have the required permission`,
-      });
-    }
 
     if (!count || count < 2 || count > 100) {
       return interaction.followUp({

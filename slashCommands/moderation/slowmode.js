@@ -4,6 +4,7 @@ module.exports = {
   name: "slowmode",
   description: "slowmode channel",
   category: "moderation",
+  userPermissions: ["MANAGE_CHANNELS"],
   options: [
     {
       name: "time",
@@ -14,12 +15,6 @@ module.exports = {
   run: async (client, interaction, args) => {
     const [time] = args;
     const { EMOJI } = client.config;
-
-    if (!interaction.member.permissions.has("MANAGE_CHANNELS")) {
-      return interaction.followUp({
-        content: `${EMOJI.ERROR} You don't have the required permission`,
-      });
-    }
 
     if (!time) {
       interaction.channel.setRateLimitPerUser(0);

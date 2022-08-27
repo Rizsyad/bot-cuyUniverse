@@ -6,6 +6,7 @@ module.exports = {
   name: "snipe",
   description: "Show deleted chat",
   category: "moderation",
+  userPermissions: ["MANAGE_CHANNELS"],
   options: [
     {
       name: "page",
@@ -16,12 +17,6 @@ module.exports = {
   run: async (client, interaction, args) => {
     const { EMOJI } = client.config;
     const [page] = args;
-
-    if (!interaction.member.permissions.has("MANAGE_CHANNELS")) {
-      return interaction.followUp({
-        content: `${EMOJI.ERROR} You don't have the required permission`,
-      });
-    }
 
     const snipes = client.snipes.get(interaction.channel.id);
     if (!snipes)
