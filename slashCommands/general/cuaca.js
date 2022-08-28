@@ -1,5 +1,3 @@
-const { MessageEmbed, Interaction } = require("discord.js");
-const { response } = require("express");
 const weather = require("weather-js");
 const { embeed, errorEmbed } = require("../../helpers/utility");
 

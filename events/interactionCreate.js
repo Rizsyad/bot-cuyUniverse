@@ -1,4 +1,5 @@
 const client = require("../index");
+const { errorEmbed } = require("../helpers/utility");
 
 client.on("interactionCreate", async (interaction) => {
   if (!interaction.inGuild())
@@ -16,7 +17,11 @@ client.on("interactionCreate", async (interaction) => {
       !interaction.member.permissions.has(cmd.userPermissions)
     )
       return interaction.followUp({
-        content: `${client.config.EMOJI.ERROR} You don't have permission for this command`,
+        embeds: [
+          errorEmbed(
+            `${client.config.EMOJI.ERROR} You don't have permission for this command`
+          ),
+        ],
       });
 
     const args = [];
