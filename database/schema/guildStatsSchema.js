@@ -1,10 +1,11 @@
 const mongoose = require("mongoose");
 
 const guildSchema = new mongoose.Schema({
-    guildID: { type: Number, required: true },
-    channel1ID: { type: String, required: true, max: 40 },
-    channel2ID: { type: String, required: true, max: 40},
-    channel3ID: { type: String, required: true, max: 40 }
-})
+  guildID: { type: Number, required: true },
+  category: { type: String, max: 40, default: "0" },
+  memberStat: { type: String, max: 40, default: "0" },
+  botStat: { type: String, max: 40, default: "0" },
+  AllStat: { type: String, max: 40, default: "0" },
+});
 
-module.exports = mongoose.model( 'GuildStats' , guildSchema);
+module.exports = mongoose.model("GuildStats", guildSchema);

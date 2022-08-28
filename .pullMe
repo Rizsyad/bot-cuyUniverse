@@ -1,0 +1,9 @@
+{
+  "repository": "Rizsyad/bot-cuyUniverse",
+  "gitPull": "origin master",
+  "beforePull": "kill 1",
+  "afterPull": [
+    "npm install",
+    "npm start"
+  ]
+}
