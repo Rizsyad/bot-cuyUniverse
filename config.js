@@ -1,11 +1,12 @@
 require("dotenv").config();
 
-const { TOKEN, DB_USER, DB_PASS } = process.env;
+const { TOKEN, DB_USER, DB_PASS, DB_HOST } = process.env;
 
 module.exports = {
   TOKEN,
   DB_USER,
   DB_PASS,
+  DB_HOST,
   COLORS_EMBEED: "RANDOM",
   MAIN_COLOR: "",
   ERROR_COLOR: "",

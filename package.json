@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "dev": "nodemon .",
-    "start": "node index.js"
+    "start": "node .",
+    "pullMe": "npm pullMe"
   },
   "author": "",
   "license": "ISC",
@@ -21,6 +22,7 @@
     "moment-mini": "^2.29.4",
     "mongoose": "^6.5.3",
     "ms": "^2.1.3",
+    "pullme": "^1.0.10",
     "weather-js": "^2.0.0"
   }
 }
