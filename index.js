@@ -1,4 +1,5 @@
 require("./webserver");
+require("./database/db");
 
 const { Client, Intents, Collection } = require("discord.js");
 const { DiscordTogether } = require("discord-together");
