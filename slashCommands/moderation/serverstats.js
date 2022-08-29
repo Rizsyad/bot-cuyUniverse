@@ -173,7 +173,7 @@ module.exports = {
           memberStat: 0,
           botStat: 0,
         })
-        return interaction.followUp({ embeds: [errorEmbed(`Your channel already removed or your channel doesn't exist`) ]});
+        return interaction.followUp({ embeds: [errorEmbed(`Your channel already removed or you haven't create the serverstats`) ]});
       }
     }
   },
