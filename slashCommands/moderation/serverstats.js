@@ -1,6 +1,10 @@
-const { embeed, errorEmbed, successEmbed } = require("../../helpers/utility");
+const {
+  errorEmbed,
+  successEmbed,
+  createChannelStats,
+  deleteChannelStats,
+} = require("../../helpers/utility");
 const db = require("../../database/models/guildStatsModel");
-const GuildStatsSchema = require("../../database/schema/guildStatsSchema");
 
 module.exports = {
   name: "serverstats",
@@ -69,18 +73,6 @@ module.exports = {
               .create("SERVER STATS", { type: "GUILD_CATEGORY" })
               .then((category) => category.id);
 
-      const voiceOptions = {
-        type: "GUILD_VOICE",
-        permissionOverwrites: [
-          {
-            id: guild.roles.everyone,
-            allow: ["VIEW_CHANNEL"],
-            deny: ["CONNECT", "READ_MESSAGE_HISTORY"],
-          },
-        ],
-        parent: categoryId,
-      };
-
       db.updateStats(guildID, "category", categoryId);
 
       if (counterChoice == "am") {
@@ -89,11 +81,12 @@ module.exports = {
             embeds: [errorEmbed("The Stat has set you must turn off the stat")],
           });
 
-        const AllStat = await guildChannel
-          .create(`👥 | All Members : ${TotalMembers}`, voiceOptions)
-          .then((stat) => stat.id);
-
-        db.updateStats(guildID, "AllStat", AllStat);
+        await createChannelStats(
+          guild,
+          categoryId,
+          `👥 | All Members : ${TotalMembers}`,
+          "AllStat"
+        );
       }
 
       if (counterChoice == "mo") {
@@ -102,11 +95,7 @@ module.exports = {
             embeds: [errorEmbed("The Stat has set you must turn off the stat")],
           });
 
-        const memberStat = await guildChannel
-          .create(`👤 | Members : ${Human} `, voiceOptions)
-          .then((stat) => stat.id);
-
-        db.updateStats(guildID, "memberStat", memberStat);
+        await createChannelStats(guild, categoryId, `👤 | Members : ${Human} `, "memberStat");
       }
 
       if (counterChoice == "bo") {
@@ -115,66 +104,58 @@ module.exports = {
             embeds: [errorEmbed("The Stat has set you must turn off the stat")],
           });
 
-        const botStat = await guildChannel
-          .create(`🤖 | Bot : ${Bot}`, voiceOptions)
-          .then((stat) => stat.id);
-
-        db.updateStats(guildID, "botStat", botStat);
+        await createChannelStats(guild, categoryId, `🤖 | Bot : ${Bot}`, "botStat");
       }
 
-      interaction.followUp({ embeds: [successEmbed(`Success set server Stats. \n Your stats will automatically updated every 15 minutes.`)] });
+      interaction.followUp({
+        embeds: [
+          successEmbed(
+            `Success set server Stats. \n Your stats will automatically updated every 15 minutes.`
+          ),
+        ],
+      });
     }
 
     if (subcommand === "delete") {
-      if(guildChannel.cache.get(getGuild.AllStat) || guildChannel.cache.get(getGuild.memberStat) || guildChannel.cache.get(getGuild.botStat)) {
-        if (counterChoice == "am") {
-          if (getGuild.AllStat === "0")
-            return interaction.followUp({
-              embeds: [errorEmbed("The Stat no set")],
-            });
+      if (counterChoice == "am") {
+        if (getGuild.AllStat === "0")
+          return interaction.followUp({
+            embeds: [errorEmbed("The Stat no set")],
+          });
 
-          await guildChannel.cache.get(getGuild.AllStat).delete();
-          db.updateStats(guildID, "AllStat", "0");
+        await deleteChannelStats(guildID, guildChannel, getGuild.AllStat, "AllStat");
 
-          return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`) ]});
-        }
+        // await guildChannel.cache.get(getGuild.AllStat).delete();
+        // db.updateStats(guildID, "AllStat", "0");
 
-        if (counterChoice == "mo") {
-          if (getGuild.memberStat === "0")
-            return interaction.followUp({
-              embeds: [errorEmbed("The Stat no set")],
-            });
-
-          await guildChannel.cache.get(getGuild.memberStat).delete();
-          db.updateStats(guildID, "memberStat", "0");
-          
-          return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`) ]});
-        }
-
-        if (counterChoice == "bo") {
-          if (getGuild.botStat === "0")
-            return interaction.followUp({
-              embeds: [errorEmbed("The Stat no set")],
-            });
-
-          // const botStat = await guildChannel
-          //   .create(`🤖 | Bot : ${Bot}`, voiceOptions)
-          //   .then((stat) => stat.id);
-
-          await guildChannel.cache.get(getGuild.botStat).delete();
-          db.updateStats(guildID, "botStat", "0");
-
-          return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`) ]});
-        }
-      }else{
-        await GuildStatsSchema.findOneAndUpdate({guildID} , {
-          category: 0,
-          AllStat: 0,
-          memberStat: 0,
-          botStat: 0,
-        })
-        return interaction.followUp({ embeds: [errorEmbed(`Your channel already removed or you haven't create the serverstats`) ]});
+        // return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`)] });
       }
+
+      if (counterChoice == "mo") {
+        if (getGuild.memberStat === "0")
+          return interaction.followUp({
+            embeds: [errorEmbed("The Stat no set")],
+          });
+
+        await deleteChannelStats(guildID, guildChannel, getGuild.memberStat, "memberStat");
+        // await guildChannel.cache.get(getGuild.memberStat).delete();
+        // db.updateStats(guildID, , "0");
+
+        // return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`)] });
+      }
+
+      if (counterChoice == "bo") {
+        if (getGuild.botStat === "0")
+          return interaction.followUp({
+            embeds: [errorEmbed("The Stat no set")],
+          });
+
+        await deleteChannelStats(guildID, guildChannel, getGuild.botStat, "botStat");
+        // await guildChannel.cache.get(getGuild.botStat).delete();
+        // db.updateStats(guildID, "botStat", "0");
+      }
+
+      return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`)] });
     }
   },
 };
