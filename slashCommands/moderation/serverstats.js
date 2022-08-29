@@ -1,5 +1,6 @@
-const { embeed, errorEmbed } = require("../../helpers/utility");
+const { embeed, errorEmbed, successEmbed } = require("../../helpers/utility");
 const db = require("../../database/models/guildStatsModel");
+const GuildStatsSchema = require("../../database/schema/guildStatsSchema");
 
 module.exports = {
   name: "serverstats",
@@ -121,45 +122,59 @@ module.exports = {
         db.updateStats(guildID, "botStat", botStat);
       }
 
-      interaction.followUp({ content: `Success set server Stats` });
+      interaction.followUp({ embeds: [successEmbed(`Success set server Stats. \n Your stats will automatically updated every 15 minutes.`)] });
     }
 
     if (subcommand === "delete") {
-      if (counterChoice == "am") {
-        if (getGuild.AllStat === "0")
-          return interaction.followUp({
-            embeds: [errorEmbed("The Stat no set")],
-          });
+      if(guildChannel.cache.get(getGuild.AllStat) || guildChannel.cache.get(getGuild.memberStat) || guildChannel.cache.get(getGuild.botStat)) {
+        if (counterChoice == "am") {
+          if (getGuild.AllStat === "0")
+            return interaction.followUp({
+              embeds: [errorEmbed("The Stat no set")],
+            });
 
-        await guildChannel.cache.get(getGuild.AllStat).delete();
-        db.updateStats(guildID, "AllStat", "0");
+          await guildChannel.cache.get(getGuild.AllStat).delete();
+          db.updateStats(guildID, "AllStat", "0");
+
+          return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`) ]});
+        }
+
+        if (counterChoice == "mo") {
+          if (getGuild.memberStat === "0")
+            return interaction.followUp({
+              embeds: [errorEmbed("The Stat no set")],
+            });
+
+          await guildChannel.cache.get(getGuild.memberStat).delete();
+          db.updateStats(guildID, "memberStat", "0");
+          
+          return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`) ]});
+        }
+
+        if (counterChoice == "bo") {
+          if (getGuild.botStat === "0")
+            return interaction.followUp({
+              embeds: [errorEmbed("The Stat no set")],
+            });
+
+          // const botStat = await guildChannel
+          //   .create(`🤖 | Bot : ${Bot}`, voiceOptions)
+          //   .then((stat) => stat.id);
+
+          await guildChannel.cache.get(getGuild.botStat).delete();
+          db.updateStats(guildID, "botStat", "0");
+
+          return interaction.followUp({ embeds: [successEmbed(`Success remove server Stats`) ]});
+        }
+      }else{
+        await GuildStatsSchema.findOneAndUpdate({guildID} , {
+          category: 0,
+          AllStat: 0,
+          memberStat: 0,
+          botStat: 0,
+        })
+        return interaction.followUp({ embeds: [errorEmbed(`Your channel already removed or you haven't create the serverstats`) ]});
       }
-
-      if (counterChoice == "mo") {
-        if (getGuild.memberStat === "0")
-          return interaction.followUp({
-            embeds: [errorEmbed("The Stat no set")],
-          });
-
-        await guildChannel.cache.get(getGuild.memberStat).delete();
-        db.updateStats(guildID, "memberStat", "0");
-      }
-
-      if (counterChoice == "bo") {
-        if (getGuild.botStat === "0")
-          return interaction.followUp({
-            embeds: [errorEmbed("The Stat no set")],
-          });
-
-        // const botStat = await guildChannel
-        //   .create(`🤖 | Bot : ${Bot}`, voiceOptions)
-        //   .then((stat) => stat.id);
-
-        await guildChannel.cache.get(getGuild.botStat).delete();
-        db.updateStats(guildID, "botStat", "0");
-      }
-
-      interaction.followUp({ content: `Success remove server Stats` });
     }
   },
 };
