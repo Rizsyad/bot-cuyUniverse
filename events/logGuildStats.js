@@ -1,6 +1,7 @@
 const client = require("../index");
 const db = require("../database/models/guildStatsModel");
 const ms = require("ms");
+const { changeNameChannelStats } = require("../helpers/utility");
 
 client.on("ready", async () => {
   const guilds = client.guilds.cache.map((guild) => guild.id);
@@ -18,25 +19,34 @@ client.on("ready", async () => {
       const Bot = guild.members.cache.filter((m) => m.user.bot).size;
       const Human = guild.members.cache.filter((m) => !m.user.bot).size;
 
-      if (getGuild.AllStat != 0){
-        await guildChannel
-          .fetch(getGuild.AllStat)
-          .then((channel) =>
-            channel.setName(`👥 | All Members : ${TotalMembers}`))
-      };
+      if (getGuild.AllStat != 0) {
+        await changeNameChannelStats(
+          guildID,
+          guildChannel,
+          getGuild.AllStat,
+          `👥 | All Members : ${TotalMembers}`,
+          "AllStat"
+        );
+      }
 
-      if (getGuild.memberStat != 0){
-        await guildChannel
-          .fetch(getGuild.memberStat)
-          .then((channel) => 
-            channel.setName(`👤 | Human : ${Human}`))
-      };
+      if (getGuild.memberStat != 0) {
+        await changeNameChannelStats(
+          guildID,
+          guildChannel,
+          getGuild.memberStat,
+          `👤 | Human : ${Human}`,
+          "memberStat"
+        );
+      }
 
-      if (getGuild.botStat != 0){
-        await guildChannel
-          .fetch(getGuild.botStat)
-          .then((channel) => {
-            channel.setName(`🤖 | Bot : ${Bot}`)})
+      if (getGuild.botStat != 0) {
+        await changeNameChannelStats(
+          guildID,
+          guildChannel,
+          getGuild.botStat,
+          `🤖 | Bot : ${Bot}`,
+          "botStat"
+        );
       }
     };
 
