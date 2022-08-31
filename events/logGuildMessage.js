@@ -23,7 +23,10 @@ client.on("guildMemberAdd", async (member) => {
 
             const attachment = new MessageAttachment(data, "WelcomeCard.png");
             client.channels.fetch(WelcomeMessageChannel).then((channel) => {
-                return channel.send({ files: [attachment] });
+                return channel.send({
+                    content: `Halo <@${member.user.id}>, salken ya cuy :)`,
+                    files: [attachment],
+                });
             });
         });
     }
