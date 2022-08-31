@@ -7,7 +7,6 @@ module.exports = {
     category: "fun",
     run: async (client, interaction, args) => {
         const { data } = await axios.get("https://some-random-api.ml/meme");
-        console.log(data);
         const memeEmbedJson = {
             title: `${data.caption}`,
             image: data.image,
