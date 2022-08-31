@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@iamtraction/google-translate": "github:iamtraction/google-translate",
+    "@sooluh/subfinder": "^1.0.3",
     "ascii-table": "^0.0.9",
     "axios": "^0.27.2",
     "canvacord": "^5.4.6",
