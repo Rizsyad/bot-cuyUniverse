@@ -5,7 +5,7 @@ const { errorEmbed, successEmbed, embeed } = require("../../helpers/utility");
 module.exports = {
     name: "level",
     description: "Melihat level user",
-    category: "general",
+    category: "level",
     options: [
         {
             name: "user",
