@@ -4,7 +4,7 @@ const { errorEmbed, successEmbed, embeed } = require("../../helpers/utility");
 module.exports = {
     name: "leaderboard",
     description: "Menampilkan leaderboard level",
-    category: "general",
+    category: "level",
     run: async (client, interaction, args) => {
         const rawLeaderboard = await Levels.fetchLeaderboard(interaction.guild.id, 10);
 
