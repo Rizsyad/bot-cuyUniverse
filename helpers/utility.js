@@ -1,4 +1,4 @@
-const { MessageEmbed } = require("discord.js");
+const { MessageEmbed, MessageAttachment } = require("discord.js");
 const client = require("../index");
 const ms = require("ms");
 const db = require("../database/models/guildStatsModel");
@@ -107,6 +107,10 @@ const deleteChannelStats = async (guildID, guildChannel, categoryId, statsName) 
   db.updateStats(guildID, statsName, "0");
 };
 
+const sendFileText = (text) => {
+  return new MessageAttachment(Buffer.from(text), "output.txt");
+};
+
 module.exports = {
   embeed,
   errorEmbed,
@@ -115,4 +119,5 @@ module.exports = {
   changeNameChannelStats,
   createChannelStats,
   deleteChannelStats,
+  sendFileText,
 };

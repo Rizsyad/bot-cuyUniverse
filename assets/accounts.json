@@ -1,0 +1,1289 @@
+{
+  "users": [
+    {
+      "uri": "https://graph.facebook.com/[USERNAME]",
+      "error_string": "Some of the aliases you requested do not exist",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://twitter.com/[USERNAME]",
+      "error_string": "This account doesn’t exist",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.instagram.com/[USERNAME]",
+      "error_string": "The link you followed may be broken",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://myspace.com/[USERNAME]",
+      "error_string": "Not Found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.youtube.com/[USERNAME]",
+      "error_string": "404handler",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://[USERNAME].tumblr.com/",
+      "error_string": "Unless you were looking for this error",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://[USERNAME].skyrock.com/profil/",
+      "error_string": "Page non trou",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://weheartit.com/[USERNAME]",
+      "error_string": "Looks like this page has moved or",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://vk.com/[USERNAME]",
+      "error_string": "404 Not Found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.pinterest.com/[USERNAME]",
+      "error_string": "Discover recipes, home ideas, style inspiration and other ideas to try.",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://ello.co/[USERNAME]",
+      "error_string": "If all else fails you can try checking out",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://keybase.io/[USERNAME]",
+      "error_string": "Have you tried twitter? It has more users",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://vimeo.com/[USERNAME]",
+      "error_string": "or try searching Vimeo. You",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://m.me/[USERNAME]",
+      "error_string": "URL=/?_fb_noscript=1",
+      "category": "Messaging Apps"
+    },
+    {
+      "uri": "https://www.buzzen.com/user/[USERNAME]/profile.shtml",
+      "error_string": "The requested profile does not exist",
+      "category": "Messaging Apps"
+    },
+    {
+      "uri": "https://[USERNAME].livejournal.com",
+      "error_string": "Unknown Journal",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://[USERNAME].blogspot.com/",
+      "error_string": "the blog you were looking ",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://[USERNAME].wordpress.com/",
+      "error_string": "Do you want to register",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.gaiaonline.com/profiles/[USERNAME]",
+      "error_string": "user does not exist",
+      "category": "Forums"
+    },
+    {
+      "uri": "https://disqus.com/by/[USERNAME]",
+      "error_string": "You might have followed a bad link or",
+      "category": "Forums"
+    },
+    {
+      "uri": "https://forums.digitalspy.com/profile/discussions/[USERNAME]",
+      "error_string": "User not found",
+      "category": "Forums"
+    },
+    {
+      "uri": "https://www.flyertalk.com/forum/members/[USERNAME].html",
+      "error_string": "This user has not registered",
+      "category": "Forums"
+    },
+    {
+      "uri": "http://www.abovetopsecret.com/forum/mem/[USERNAME]",
+      "error_string": "joind on: Dec, 31 1969",
+      "category": "Forums"
+    },
+    {
+      "uri": "https://www.gotinder.com/@[USERNAME]",
+      "error_string": "Looking for Someone",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "https://badoo.com/profile/[USERNAME]",
+      "error_string": "the page you were looking for appears to be missing",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "https://faceparty.com/[USERNAME]",
+      "error_string": "Member not found",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "https://venmo.com/[USERNAME]",
+      "error_string": "Sorry, the page you requested does not exist!",
+      "category": "Payment Apps"
+    },
+    {
+      "uri": "https://cash.app/[USERNAME]",
+      "error_string": "already_localized",
+      "category": "Payment Apps"
+    },
+    {
+      "uri": "https://www.ebay.com/usr/[USERNAME]",
+      "error_string": "The User ID you entered was not found.",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://www.etsy.com/shop/[USERNAME]",
+      "error_string": "the page you were looking for was not found",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://www.patreon.com/[USERNAME]",
+      "error_string": "Oh no! Looks like you got lost.",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://www.kickstarter.com/profile/[USERNAME]",
+      "error_string": "The page you were looking for ",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://sg.carousell.com/[USERNAME]",
+      "error_string": "Oh no!",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://www.rubylane.com/shop/[USERNAME]",
+      "error_string": "No Shop Available",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://www.gamespot.com/profile/[USERNAME]",
+      "error_string": "to find exactly what",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://[USERNAME].newgrounds.com/",
+      "error_string": "No user",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://www.animenewsnetwork.com/bbs/phpBB2/profile.php?mode=viewprofile&u=[USERNAME]",
+      "error_string": "Could not find expected value in database",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "https://www.animefreak.tv/user/profile/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "https://www.anime-planet.com/users/[USERNAME]",
+      "error_string": "Be a part of the community",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "https://www.viz.com/profiles/[USERNAME]",
+      "error_string": "We could not find",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "https://www.crunchyroll.com/user/[USERNAME]",
+      "error_string": "unable to find",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "https://myanimelist.net/profile/[USERNAME]",
+      "error_string": "This page doesn't exist.",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "http://www.furaffinity.net/user/[USERNAME]",
+      "error_string": "This user cannot be found.",
+      "category": "Anime Manga Cosplay"
+    },
+    {
+      "uri": "https://www.deviantart.com/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://s146.photobucket.com/user/[USERNAME]/library?page=1",
+      "error_string": "Sorry, the requested page does not exist.",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.flickr.com/photos/[USERNAME]",
+      "error_string": "It appears the photostream",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://society6.com/[USERNAME]",
+      "error_string": "But we can help you find",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.artsy.net/artist/[USERNAME]",
+      "error_string": "exist at this URL",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://fineartamerica.com/profiles/[USERNAME]",
+      "error_string": "Photographers and Visual Artists",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.thingiverse.com/[USERNAME]",
+      "error_string": "YOU HAVE REACHED THE END OF THE THINGIVERSE",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://[USERNAME].cgsociety.org",
+      "error_string": "There's nothing here.",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://dribbble.com/[USERNAME]",
+      "error_string": "Whoops",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.behance.net/[USERNAME]",
+      "error_string": "Oops!",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.artstation.com/[USERNAME]",
+      "error_string": "Page not found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://craftgawker.com/post/archive/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://imageshack.us/user/[USERNAME]",
+      "error_string": "Your images have never looked better",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.canva.com/[USERNAME]",
+      "error_string": "Sorry, the page you are looking for does",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://youpic.com/photographer/[USERNAME]",
+      "error_string": "Welcome to the infamous 404 page",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://soundcloud.com/[USERNAME]",
+      "error_string": "SoundCloud - Hear the ",
+      "category": "Music"
+    },
+    {
+      "uri": "https://[USERNAME].bandcamp.com/",
+      "error_string": "Sign Up",
+      "category": "Music"
+    },
+    {
+      "uri": "https://audiomack.com/artist/[USERNAME]",
+      "error_string": "Page not found",
+      "category": "Music"
+    },
+    {
+      "uri": "https://clyp.it/user/[USERNAME]",
+      "error_string": "Clyp - Not Found",
+      "category": "Music"
+    },
+    {
+      "uri": "https://www.mixcloud.com/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Music"
+    },
+    {
+      "uri": "https://www.reverbnation.com/[USERNAME]",
+      "error_string": "Sorry",
+      "category": "Music"
+    },
+    {
+      "uri": "https://www.datpiff.com/profile/[USERNAME]",
+      "error_string": "DatPiff :: Community - Coming Soon",
+      "category": "Music"
+    },
+    {
+      "uri": "https://www.di.fm/curators/[USERNAME]",
+      "error_string": "Error 404",
+      "category": "Music"
+    },
+    {
+      "uri": "https://8tracks.com/[USERNAME]",
+      "error_string": "This page has vanished",
+      "category": "Music"
+    },
+    {
+      "uri": "https://blip.fm/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Music"
+    },
+    {
+      "uri": "https://github.com/[USERNAME]",
+      "error_string": "Not Found",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://hackerone.com/[USERNAME]",
+      "error_string": "Page not found",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://bugcrowd.com/[USERNAME]",
+      "error_string": "The requested page was not found",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://news.ycombinator.com/user?id=[USERNAME]",
+      "error_string": "No such user",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.codeproject.com/Members/[USERNAME]",
+      "error_string": "Unable to load",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://slashdot.org/~[USERNAME]",
+      "error_string": "The user you requested does not exist",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.virustotal.com/ui/users/[USERNAME]/trusted_users",
+      "error_string": "NotFoundError",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://discuss.codecademy.com/u/[USERNAME]",
+      "error_string": "Oops!",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.hackthissite.org/user/view/[USERNAME]",
+      "error_string": "Error!",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://coderwall.com/[USERNAME]",
+      "error_string": "Unable to handle that url",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.pornhub.com/users/[USERNAME]",
+      "error_string": "Error Page Not Found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://xhamster.com/users/[USERNAME]",
+      "error_string": "Oops, the page you requested seems to be non-existent.",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.xvideos.com/profiles/[USERNAME]",
+      "error_string": "THIS PROFILE DOESN&#039;T EXIST",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.realgfporn.com/user/[USERNAME]",
+      "error_string": "404 - Page not found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.redtube.com/users/[USERNAME]",
+      "error_string": "Error 404! Page not found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.porndig.com/[USERNAME]/activity/",
+      "error_string": "The page doesn't exist",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://profiles.myfreecams.com/[USERNAME]",
+      "error_string": "You are not logged in",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://chaturbate.com/[USERNAME]/",
+      "error_string": "http 404 - Page Not Found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.camsoda.com/[USERNAME]",
+      "error_string": "No username found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://bongacams.com/[USERNAME]",
+      "error_string": "The page cannot be found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.cam4.com/[USERNAME]",
+      "error_string": "The profile you were attempting to access does not exist",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.newbienudes.com/profile/[USERNAME]",
+      "error_string": "Member not found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.tnaflix.com/profile/[USERNAME]",
+      "error_string": "Featured Porn Videos",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.xtube.com/profile/[USERNAME]",
+      "error_string": "Error page not found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.pornesq.com/user/[USERNAME]",
+      "error_string": "Unexpected error!",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.tripadvisor.com/Profile/[USERNAME]",
+      "error_string": "This page is on vacation",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.instructables.com/member/[USERNAME]",
+      "error_string": "404: We're sorry, things break sometimes",
+      "category": "Other"
+    },
+    {
+      "uri": "https://9gag.com/u/[USERNAME]",
+      "error_string": "404 Nothing here",
+      "category": "Other"
+    },
+    {
+      "uri": "https://pastebin.com/u/[USERNAME]",
+      "error_string": "Optional Paste Settings",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://letterboxd.com/[USERNAME]",
+      "error_string": "Perhaps you imagined it",
+      "category": "Other"
+    },
+    {
+      "uri": "https://bitbucket.org/[USERNAME]",
+      "error_string": "That link has no power here",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://launchpad.net/~[USERNAME]",
+      "error_string": "This page does not exist",
+      "category": "Other"
+    },
+    {
+      "uri": "https://ifttt.com/p/[USERNAME]",
+      "error_string": "The requested page or file does not exist.",
+      "category": "Other"
+    },
+    {
+      "uri": "https://flipboard.com/@[USERNAME]",
+      "error_string": "error-view__message-description ui-text--body",
+      "category": "Other"
+    },
+    {
+      "uri": "https://mamby.com/user/[USERNAME]",
+      "error_string": "<title>Mamby",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.buzzfeed.com/[USERNAME]",
+      "error_string": "or there could be a typo",
+      "category": "Other"
+    },
+    {
+      "uri": "https://sourceforge.net/u/[USERNAME]/profile",
+      "error_string": "Whoops,",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.slideshare.net/[USERNAME]",
+      "error_string": "is still available. Why not",
+      "category": "Other"
+    },
+    {
+      "uri": "https://robertsspaceindustries.com/citizens/[USERNAME]",
+      "error_string": "You are currently venturing unknown space",
+      "category": "Other"
+    },
+    {
+      "uri": "https://500px.com/[USERNAME]",
+      "error_string": "Oops! This page doesn’t exist",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://about.me/[USERNAME]",
+      "error_string": "<title>about.me</title>",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://angel.co/[USERNAME]",
+      "error_string": "Page not found - 404 - AngelList",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://appearoo.com/[USERNAME]",
+      "error_string": "Page Error</title>",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://ask.fm/[USERNAME]",
+      "error_string": "Well, apparently not anymore",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.authorstream.com/[USERNAME]/",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "http://badoo.com/[USERNAME]/",
+      "error_string": "",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://bandcamp.com/[USERNAME]",
+      "error_string": "<h2>Sorry, that something isn’t here.</h2>",
+      "category": "Music"
+    },
+    {
+      "uri": "https://launchpad.37signals.com/session/profile?username=[USERNAME]",
+      "error_string": ":[]}",
+      "category": "Other"
+    },
+    {
+      "uri": "https://bitbucket.org/api/2.0/users/[USERNAME]",
+      "error_string": "error\":\"",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "http://blogmarks.net/user/[USERNAME]",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "https://bodyspace.bodybuilding.com/[USERNAME]",
+      "error_string": "<title>BodySpace FREE",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.buzznet.com/author/[USERNAME]/",
+      "error_string": "Page not found</title>",
+      "category": "Other"
+    },
+    {
+      "uri": "https://cash.me/$[USERNAME]",
+      "error_string": "",
+      "category": "Payment Apps"
+    },
+    {
+      "uri": "http://www.cardomain.com/member/[USERNAME]/",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "http://profile.cheezburger.com/[USERNAME]",
+      "error_string": "<title>Home - ",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.chess.com/member/[USERNAME]",
+      "error_string": "<title>Missing Page?! - Chess.com</title>",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://discuss.codecademy.com/u/[USERNAME]/summary",
+      "error_string": "Oops! That page doesn’t exist",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.codementor.io/[USERNAME]",
+      "error_string": "404/favicon.png",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "http://www.colourlovers.com/lover/[USERNAME]",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.cruisemates.com/forum/members/[USERNAME].html",
+      "error_string": "This user has not registered",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.dailymotion.com/[USERNAME]",
+      "error_string": "404 Page not found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://del.icio.us/[USERNAME]",
+      "error_string": "An error occurred.",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.destructoid.com/?name=[USERNAME]",
+      "error_string": "Error in query",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://devrant.com/users/[USERNAME]",
+      "error_string": "<!-- row start signup -->",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.diigo.com/interact_api/load_profile_info?name=[USERNAME]",
+      "error_string": "{}",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://discuss.elastic.co/u/[USERNAME]",
+      "error_string": "Oops!",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://diy.org/[USERNAME]",
+      "error_string": "We couldn&#x27;t find that",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.duby.co/[USERNAME]",
+      "error_string": "<title>Page Not Found",
+      "category": "Other"
+    },
+    {
+      "uri": "https://e621.net/user/show/[USERNAME]",
+      "error_string": "<title>User Listing -",
+      "category": "Adult"
+    },
+    {
+      "uri": "http://eightbit.me/[USERNAME]",
+      "error_string": "",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://www.engadget.com/about/editors/[USERNAME]/",
+      "error_string": "<title>About Us",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.eporner.com/profile/[USERNAME]/",
+      "error_string": "Profile not found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.etsy.com/people/[USERNAME]",
+      "error_string": "Sorry, the member you are looking for does not exist",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://f3.cool/[USERNAME]",
+      "error_string": "Page Not Found - F3",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.fanpop.com/fans/[USERNAME]",
+      "error_string": "What are you a fan of?",
+      "category": "Movies"
+    },
+    {
+      "uri": "https://www.fiverr.com/[USERNAME]",
+      "error_string": "<title>Fiverr",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://foursquare.com/[USERNAME]",
+      "error_string": "We couldn't find the page you're looking for.",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.freelancer.com/u/[USERNAME]",
+      "error_string": "Page Not Found - Freelancer",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "http://www.freesound.org/people/[USERNAME]/",
+      "error_string": "Page not found",
+      "category": "Music"
+    },
+    {
+      "uri": "https://friendfinder.com/profile/[USERNAME]",
+      "error_string": "302 Found",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "https://www.friendfinder-x.com/profile/[USERNAME]",
+      "error_string": "The document has moved",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "https://www.funnyordie.com/users/[USERNAME]",
+      "error_string": "404 Not Found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.furiffic.com/[USERNAME]",
+      "error_string": "<title>Whoops &middot; Furiffic</title>",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://connect.garmin.com/modern/profile/[USERNAME]",
+      "error_string": "VIEWER_USERPREFERENCES = nul",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.geekgrade.com/geeksheet/[USERNAME]/",
+      "error_string": "404 - Missing Geekshee",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.geocaching.com/profile/?u=[USERNAME]",
+      "error_string": "Error 404: DNF",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://giphy.com/channel/[USERNAME]",
+      "error_string": "<title>404 Not Found</title>",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://api.github.com/users/[USERNAME]",
+      "error_string": "Not Found",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://gitlab.com/[USERNAME]",
+      "error_string": "GitLab.com offers free unlimited",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.goodreads.com/user/show/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.alltrails.com/members/[USERNAME]",
+      "error_string": "Members | AllTrails",
+      "category": "Other"
+    },
+    {
+      "uri": "http://en.gravatar.com/profiles/[USERNAME].json",
+      "error_string": "User not found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://haveibeenpwned.com/unifiedsearch/[USERNAME]",
+      "error_string": "",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "http://hubpages.com/@[USERNAME]",
+      "error_string": "Sorry, that user does not exist",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.i-am-pregnant.com/vip/[USERNAME]",
+      "error_string": "404 Page",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.ign.com/boards/members/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://imageshack.com/user/[USERNAME]",
+      "error_string": "",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://imgur.com/user/[USERNAME]/about",
+      "error_string": "the simple 404 page",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://inkbunny.net/[USERNAME]",
+      "error_string": ">in random order<",
+      "category": "Adult"
+    },
+    {
+      "uri": "http://[USERNAME].insanejournal.com/profile",
+      "error_string": "is not currently registered",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://archive.org/search.php?query=[USERNAME]",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.interpals.net/[USERNAME]",
+      "error_string": "user does not exist",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "http://www.kongregate.com/accounts/[USERNAME]",
+      "error_string": "Sorry, no account with that name was found",
+      "category": "Gaming"
+    },
+    {
+      "uri": "http://www.last.fm/user/[USERNAME]",
+      "error_string": "Whoops! Sorry, but this page doesn't exist.",
+      "category": "Music"
+    },
+    {
+      "uri": "http://www.librarything.com/profile/[USERNAME]",
+      "error_string": "Error: This user doesn't exist",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "http://new.livejasmin.com/en/flash/get-performer-details/[USERNAME]",
+      "error_string": "success\": false\"",
+      "category": "Adult"
+    },
+    {
+      "uri": "http://marketingland.com/author/[USERNAME]",
+      "error_string": "Page not found",
+      "category": "Other"
+    },
+    {
+      "uri": "https://api.massroots.com/v1/accounts?singleUser=true&username=[USERNAME]",
+      "error_string": "NotFound",
+      "category": "Other"
+    },
+    {
+      "uri": "https://medium.com/@[USERNAME]/latest",
+      "error_string": "No user found for username",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.meetme.com/[USERNAME]",
+      "error_string": "",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "http://www.meetzur.com/[USERNAME]",
+      "error_string": "The page you are looking for does not exist.",
+      "category": "Dating Sites"
+    },
+    {
+      "uri": "https://social.technet.microsoft.com/profile/[USERNAME]/",
+      "error_string": "The resource you are looking for has been removed",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://namemc.com/name/[USERNAME]",
+      "error_string": "Available*",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://mixer.com/api/v1/channels/[USERNAME]",
+      "error_string": "Channel not found",
+      "category": "Gaming"
+    },
+    {
+      "uri": "http://api.mixlr.com/users/[USERNAME]",
+      "error_string": "Resource not found",
+      "category": "Music"
+    },
+    {
+      "uri": "http://www.moddb.com/members/[USERNAME]",
+      "error_string": "The member requested could not be found",
+      "category": "Gaming"
+    },
+    {
+      "uri": "http://muckrack.com/[USERNAME]",
+      "error_string": "Oh no! Page not found.",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.mybuilder.com/profile/view/[USERNAME]",
+      "error_string": "Whoops! You broke our site!",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.myfitnesspal.com/user/[USERNAME]/status",
+      "error_string": "Page not found",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.mylot.com/[USERNAME]",
+      "error_string": " / Whoops!",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.netvibes.com/[USERNAME]",
+      "error_string": "Sorry, the page you are looking for",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://newproject2.com/[USERNAME]",
+      "error_string": "error-404",
+      "category": "Other"
+    },
+    {
+      "uri": "https://onlyfans.com/[USERNAME]",
+      "error_string": "this page is not available",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.openstreetmap.org/user/[USERNAME]",
+      "error_string": "does not exist",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.periscope.tv/[USERNAME]",
+      "error_string": "Sorry, this page doesn’t exist",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.photoblog.com/[USERNAME]/",
+      "error_string": "Page Not found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "http://smg.photobucket.com/user/[USERNAME]/profile/",
+      "error_string": "Sorry, the requested page does not exist.",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "http://picturetrail.com/homepage/[USERNAME]",
+      "error_string": "",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "http://www.pinkbike.com/u/[USERNAME]/",
+      "error_string": "I couldn't find the page you were looking for",
+      "category": "Other"
+    },
+    {
+      "uri": "http://playlists.net/members/[USERNAME]",
+      "error_string": "Sorry we can't find that page",
+      "category": "Music"
+    },
+    {
+      "uri": "http://www.plurk.com/[USERNAME]",
+      "error_string": "User Not Found!",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.porn.com/profile/[USERNAME]",
+      "error_string": "404 - Page not found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.pornhub.com/model/[USERNAME]",
+      "error_string": "Error Page Not Found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.pornhub.com/pornstar/[USERNAME]",
+      "error_string": "Error Page Not Found",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.producthunt.com/@[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.reddit.com/user/[USERNAME]",
+      "error_string": "page not found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://repl.it/@[USERNAME]",
+      "error_string": "<title>repl.it - online REPL",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.rottentomatoes.com/critic/[USERNAME]/movies/",
+      "error_string": "Sorry, please try again later",
+      "category": "Movies"
+    },
+    {
+      "uri": "https://scratch.mit.edu/users/[USERNAME]/",
+      "error_string": "We couldn't find the page you're looking for.",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://scratch.mit.edu/users/[USERNAME]/",
+      "error_string": "We couldn't find the page you're looking for.",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.seoclerks.com/user/[USERNAME]",
+      "error_string": "<title>SEO Marketplace",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.setlist.fm/user/[USERNAME]",
+      "error_string": "Sorry, the page you requested doesn't exist",
+      "category": "Music"
+    },
+    {
+      "uri": "https://slides.com/[USERNAME]",
+      "error_string": "You may have mistyped the address",
+      "category": "Other"
+    },
+    {
+      "uri": "http://smashrun.com/[USERNAME]/",
+      "error_string": "no Smashrunner with the username",
+      "category": "Other"
+    },
+    {
+      "uri": "http://smite.guru/profile/pc/[USERNAME]",
+      "error_string": "",
+      "category": "Gaming"
+    },
+    {
+      "uri": "http://[USERNAME].smugmug.com",
+      "error_string": "schema.org/Thing",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.smule.com/[USERNAME]/",
+      "error_string": "The page you are looking for is probably stuck in the dryer again",
+      "category": "Music"
+    },
+    {
+      "uri": "http://www.snooth.com/profiles/[USERNAME]/",
+      "error_string": ">Profiles on Snooth<",
+      "category": "Other"
+    },
+    {
+      "uri": "http://[USERNAME].soup.io/rss",
+      "error_string": "Blog not found",
+      "category": "Other"
+    },
+    {
+      "uri": "https://speakerdeck.com/[USERNAME]",
+      "error_string": "Oh, this is very sad",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.sporcle.com/user/[USERNAME]/people/",
+      "error_string": "This Sporcle user cannot be found.",
+      "category": "Gaming"
+    },
+    {
+      "uri": "http://steamcommunity.com/id/[USERNAME]",
+      "error_string": "Steam Community :: Error",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://archive.storycorps.org/user/[USERNAME]/",
+      "error_string": "We're sorry, but the page",
+      "category": "Other"
+    },
+    {
+      "uri": "http://stunited.org/profile/[USERNAME]",
+      "error_string": "Not found...1",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.taringa.net/[USERNAME]",
+      "error_string": "Taringa! - Offline</title>",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.tf2items.com/id/[USERNAME]/",
+      "error_string": "",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://www.theguardian.com/profile/[USERNAME]",
+      "error_string": "Page not found | The Guardian",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.tiktok.com/@[USERNAME]",
+      "error_string": "Something is wrong on our end",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://support.t-mobile.com/people/[USERNAME]",
+      "error_string": "404 ERROR",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://passport.twitch.tv/usernames/[USERNAME]",
+      "error_string": "",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://www.udemy.com/user/[USERNAME]/",
+      "error_string": "",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://untappd.com/user/[USERNAME]/",
+      "error_string": "Untappd | 404",
+      "category": "Other"
+    },
+    {
+      "uri": "http://www.ustream.tv/channel/[USERNAME]",
+      "error_string": "Sorry, the page you requested cannot be found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://vampirefreaks.com/[USERNAME]",
+      "error_string": "Page Not Found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://api.venmo.com/v1/users/[USERNAME]",
+      "error_string": "error\":\"",
+      "category": "Payment Apps"
+    },
+    {
+      "uri": "http://www.viddler.com/channel/[USERNAME]/",
+      "error_string": "User not found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://vine.co/api/users/profiles/vanity/[USERNAME]",
+      "error_string": "That record does not exist",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.vivino.com/users/[USERNAME]",
+      "error_string": "Page not found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.voices.com/actors/[USERNAME]#bio",
+      "error_string": "We're Sorry",
+      "category": "Other"
+    },
+    {
+      "uri": "https://wanelo.com/[USERNAME]",
+      "error_string": "Hmm, that's embarrassing",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://www.wattpad.com/user/[USERNAME]",
+      "error_string": "this profile seems to be missing",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.weasyl.com/~[USERNAME]",
+      "error_string": "This user doesn't seem to be in our database.",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "http://www.wishlistr.com/profile/[USERNAME]/",
+      "error_string": "",
+      "category": "Marketplaces"
+    },
+    {
+      "uri": "https://en.wikipedia.org/wiki/User:[USERNAME]",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "https://profiles.wordpress.org/[USERNAME]",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "https://wordpress.org/support/profile/[USERNAME]",
+      "error_string": "User not found",
+      "category": "Other"
+    },
+    {
+      "uri": "http://[USERNAME].xanga.com/",
+      "error_string": "",
+      "category": "Other"
+    },
+    {
+      "uri": "https://www.xboxgamertag.com/search/[USERNAME]/",
+      "error_string": "Gamertag data is broken",
+      "category": "Gaming"
+    },
+    {
+      "uri": "https://www.xvideos.com/pornstars/[USERNAME]",
+      "error_string": "THIS PROFILE DOESN'T EXIST",
+      "category": "Adult"
+    },
+    {
+      "uri": "https://www.youtube.com/user/[USERNAME]/videos",
+      "error_string": "This channel does not exist",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.xing.com/profile/[USERNAME]",
+      "error_string": "Es tut uns leid",
+      "category": "Social Media"
+    },
+    {
+      "uri": "https://www.zomato.com/[USERNAME]",
+      "error_string": "<title>404 | Zomato</title>",
+      "category": "Other"
+    },
+    {
+      "uri": "https://api.zooppa.com/api/v3/users?filters[]=login+is+[USERNAME]",
+      "error_string": "avatar",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.dronestagr.am/author/[USERNAME]/",
+      "error_string": "404 Not Found",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://www.clippings.me/[USERNAME]",
+      "error_string": "You may have mistyped the address or the page may have moved",
+      "category": "Arts & Crafts"
+    },
+    {
+      "uri": "https://n4g.com/user/home/[USERNAME]",
+      "error_string": "The resource you are looking for has been removed",
+      "category": "Gaming"
+    },
+    {
+      "uri": "http://www.icoupon365.com/u/[USERNAME]",
+      "error_string": "404 Page Not Found",
+      "category": "Social Media"
+    },
+    {
+      "uri": "http://www.colourlovers.com/lover/[USERNAME]",
+      "error_string": "No one's home",
+      "category": "Coding & Hacking"
+    },
+    {
+      "uri": "https://www.npmjs.com/~[USERNAME]",
+      "error_string": "Scope not found",
+      "category": "Coding & Hacking"
+    }
+  ]
+}
