@@ -1,7 +1,9 @@
-const { embeed, errorEmbed } = require("../../helpers/utility");
+const { embeed, errorEmbed, sendFileText } = require("../../helpers/utility");
 const osintEmail = require("osint-email").default;
-const url = require("url");
 const { validateEmail } = require("../../helpers/validation");
+const { getExistUsername } = require("../../helpers/requests");
+const listUrls = require("../../assets/accounts.json");
+const url = require("url");
 
 module.exports = {
   name: "osint",
@@ -21,11 +23,27 @@ module.exports = {
         },
       ],
     },
+    {
+      name: "username",
+      description: "Find username of websites to see if an account exists for a given username.",
+      type: "SUB_COMMAND",
+      options: [
+        {
+          name: "username",
+          description: "Input the username",
+          type: "STRING",
+          required: true,
+        },
+      ],
+    },
   ],
   run: async (client, interaction, args) => {
     const subcommand = interaction.options.getSubcommand();
     const email = interaction.options.getString("email") || "";
+    const username = interaction.options.getString("username") || "";
     let responseEmbeed = {};
+    let file = "";
+    let sendMessage = {};
 
     if (subcommand == "leakdata") {
       if (!validateEmail(email))
@@ -54,10 +72,29 @@ module.exports = {
       };
     }
 
-    await interaction
-      .followUp({
-        embeds: [embeed(responseEmbeed)],
-      })
-      .catch((err) => {});
+    if (subcommand == "username") {
+      const found = [];
+
+      await Promise.all(
+        listUrls.users.map(async (dataUrl) => {
+          const response = await getExistUsername(
+            dataUrl.uri.replace("[USERNAME]", username),
+            dataUrl.error_string
+          );
+
+          if (response === undefined) return;
+          found.push(response);
+        })
+      );
+
+      const responeLinks = found.map((link) => link);
+
+      file = sendFileText(`${responeLinks.join("\n") || "None"}`);
+    }
+
+    if (responseEmbeed) sendMessage = { embeds: [embeed(responseEmbeed)], ...sendMessage };
+    if (file) sendMessage = { files: [file], ...sendMessage };
+
+    await interaction.followUp(sendMessage).catch((err) => {});
   },
 };
