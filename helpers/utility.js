@@ -107,8 +107,9 @@ const deleteChannelStats = async (guildID, guildChannel, categoryId, statsName) 
   db.updateStats(guildID, statsName, "0");
 };
 
-const sendFileText = (text) => {
-  return new MessageAttachment(Buffer.from(text), "output.txt");
+const sendFile = (buffer, name) => {
+  const data = Buffer.isBuffer(buffer) ? buffer : Buffer.from(buffer);
+  return new MessageAttachment(data, name);
 };
 
 module.exports = {
@@ -119,5 +120,5 @@ module.exports = {
   changeNameChannelStats,
   createChannelStats,
   deleteChannelStats,
-  sendFileText,
+  sendFile,
 };

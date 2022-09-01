@@ -1,4 +1,4 @@
-const { sendFileText, errorEmbed } = require("../../helpers/utility");
+const { sendFile, errorEmbed } = require("../../helpers/utility");
 const { getExtraxtPageLinks } = require("../../helpers/requests");
 const { isValidURL } = require("../../helpers/validation");
 
@@ -27,7 +27,7 @@ module.exports = {
       .replace("/", "");
 
     const outputExtract = await getExtraxtPageLinks(domain);
-    const file = sendFileText(outputExtract);
+    const file = sendFile(outputExtract, "output.txt");
 
     const outputMessage = { files: [file] };
     await interaction.followUp(outputMessage);

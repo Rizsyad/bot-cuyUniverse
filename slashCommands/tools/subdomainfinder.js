@@ -1,5 +1,4 @@
-const { sendFileText, errorEmbed } = require("../../helpers/utility");
-const { getExtraxtPageLinks } = require("../../helpers/requests");
+const { sendFile, errorEmbed } = require("../../helpers/utility");
 const { isValidURL } = require("../../helpers/validation");
 const Subfinder = require("@sooluh/subfinder");
 const subfinder = new Subfinder();
@@ -30,7 +29,7 @@ module.exports = {
 
     let data = await subfinder.lookup(domain);
     data = data.map((datas) => `${datas.subdomain} (${datas.status})`);
-    const file = sendFileText(data.join("\n") || "None");
+    const file = sendFile(data.join("\n") || "None", "output.txt");
 
     const outputMessage = { files: [file] };
     await interaction.followUp(outputMessage);
