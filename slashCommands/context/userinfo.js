@@ -1,4 +1,3 @@
-// const { MessageEmbed } = require("discord.js");
 const { embeed } = require("../../helpers/utility");
 const moment = require("moment-mini");
 
@@ -6,9 +5,7 @@ module.exports = {
   name: "User Information",
   type: "USER",
   run: async (client, interaction, args) => {
-    const targetUser = await interaction.guild.members.cache.get(
-      interaction.targetId
-    );
+    const targetUser = await interaction.guild.members.cache.get(interaction.targetId);
 
     const { roles, joinedTimestamp, username } = targetUser;
     const { id, tag, createdTimestamp } = targetUser.user;
@@ -16,12 +13,8 @@ module.exports = {
     const joinMoment = moment(joinedTimestamp).format("LLL");
     const createMoment = moment(createdTimestamp).format("LLL");
 
-    const joinMember = `${joinMoment} (<t:${parseInt(
-      joinedTimestamp / 1000
-    )}:R>)`;
-    const createMember = `${createMoment} (<t:${parseInt(
-      createdTimestamp / 1000
-    )}:R>)`;
+    const joinMember = `${joinMoment} (<t:${parseInt(joinedTimestamp / 1000)}:R>)`;
+    const createMember = `${createMoment} (<t:${parseInt(createdTimestamp / 1000)}:R>)`;
 
     const userInfoEmbeed = embeed({
       author: {

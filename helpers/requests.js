@@ -33,4 +33,5 @@ const getExtraxtPageLinks = async (url) => {
 module.exports = {
   getExistUsername,
   getExtraxtPageLinks,
+  request,
 };

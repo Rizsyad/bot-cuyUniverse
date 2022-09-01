@@ -1,4 +1,4 @@
-const { embeed, errorEmbed, sendFileText } = require("../../helpers/utility");
+const { embeed, errorEmbed, sendFile } = require("../../helpers/utility");
 const osintEmail = require("osint-email").default;
 const { validateEmail } = require("../../helpers/validation");
 const { getExistUsername } = require("../../helpers/requests");
@@ -89,7 +89,7 @@ module.exports = {
 
       const responeLinks = found.map((link) => link);
 
-      file = sendFileText(`${responeLinks.join("\n") || "None"}`);
+      file = sendFile(`${responeLinks.join("\n") || "None"}`, "output.txt");
     }
 
     if (responseEmbeed) sendMessage = { embeds: [embeed(responseEmbeed)], ...sendMessage };

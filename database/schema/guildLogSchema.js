@@ -1,11 +1,13 @@
 const mongoose = require("mongoose");
 
 const guildLogSchema = mongoose.Schema({
-    guildID: { type: Number, required: true },
-    welcomeMessage: { type: Boolean, required: true },
-    welcomeChannelID: { type: String, required: true, max: 40, default: false },
-    leaveMessage: { type: Boolean, required: true },
-    leaveChannelID: { type: String, required: true, max: 40, default: false },
+  guildID: { type: Number, required: true },
+  activeWelcomMessage: { type: Boolean, default: false },
+  activeLeaveMessage: { type: Boolean, default: false },
+  welcomeMessage: { type: String, default: "" },
+  leaveMessage: { type: String, default: "" },
+  welcomeChannelID: { type: String, max: 40, default: "" },
+  leaveChannelID: { type: String, max: 40, default: "" },
 });
 
 module.exports = mongoose.model("guildLog", guildLogSchema);
