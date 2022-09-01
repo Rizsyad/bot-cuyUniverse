@@ -1,25 +1,18 @@
-const fetch = require("node-fetch");
 const { errorEmbed, embeed } = require("../../helpers/utility");
+const { request } = require("../../helpers/requests");
 
 module.exports = {
-    name: "meme",
-    description: "Send a random meme",
-    category: "fun",
-    run: async (client, interaction, args) => {
-        const response = await fetch("https://api.imgflip.com/get_memes")
-            .then((response) => response.json())
-            .then((response) => {
-                const { memes } = response.data;
-                const randomMemeImg = Math.floor(Math.random() * memes.length);
-                const memeImage = memes[randomMemeImg].url;
+  name: "meme",
+  description: "Send a random meme",
+  category: "fun",
+  run: async (client, interaction, args) => {
+    const { data } = await request("https://some-random-api.ml/meme", "GET");
+    const memeEmbedJson = {
+      title: `${data.caption}`,
+      image: data.image,
+    };
+    const memeEmbed = embeed(memeEmbedJson);
 
-                const memeEmbedJson = {
-                    title: "Random Meme",
-                    image: memeImage,
-                };
-                const memeEmbed = embeed(memeEmbedJson);
-
-                return interaction.followUp({ embeds: [memeEmbed] });
-            });
-    },
+    return interaction.followUp({ embeds: [memeEmbed] });
+  },
 };
