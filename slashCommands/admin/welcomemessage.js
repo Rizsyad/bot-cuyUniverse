@@ -51,7 +51,7 @@ module.exports = {
 
       const welcomeMessage = getMessage.content;
 
-      if (getGuild.activeWelcomMessage) {
+      if (getGuild?.activeWelcomMessage) {
         return interaction.followUp({
           content: "Your Welcome Message is already enable",
         });
