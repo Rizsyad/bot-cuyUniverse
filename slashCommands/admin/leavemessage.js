@@ -51,7 +51,7 @@ module.exports = {
 
       const leaveMessage = getMessage.content;
 
-      if (getGuild.activeLeaveMessage) {
+      if (getGuild?.activeLeaveMessage) {
         return interaction.followUp({
           content: "Your Leave Message is already enable",
         });
