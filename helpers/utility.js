@@ -1,6 +1,6 @@
 const { MessageEmbed, MessageAttachment } = require("discord.js");
-const client = require("../index");
 const ms = require("ms");
+const client = require("../index");
 const db = require("../database/models/guildStatsModel");
 
 const { COLORS_EMBEED } = client.config;
